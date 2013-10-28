@@ -23,8 +23,6 @@
 \usepackage[hidelinks]{hyperref}
 \bibliographystyle{ieeetr-sv} % Custom Swedish version of 'ieeetr'.
 
-% Uppgift 10 - Rapport: Innovation
-
 \title{Neurala gränssnitt}
 \author{Robin Eklind}
 
@@ -110,50 +108,52 @@ den kan överföras i form av nervsignaler. Denna omkodning kan liknas med
 översättningen som sker inom datorer mellan olika tecken och unika sekvenser av
 ettor och nollor.
 
-Neurala gränssnitt kan ses som en länk mellan hjärnan och elektroniska
-komponenter. Denna länk gör det möjligt att skicka och ta emot nervsignaler från
-hjärnan. För att kunna kommunicera med hjärnan måste nervsignalerna kunna kodas
-och avkodas på ett korrekt sätt.
+Neurala gränssnitt skapar en länk mellan hjärnan och elektroniska komponenter
+som gör det möjligt att skicka och ta emot nervsignaler. För att kunna
+kommunicera med hjärnan måste nervsignalerna i sin tur kodas och avkodas på ett
+korrekt sätt; mer om detta i sektion \ref{enc_dec}.
 
-Det finns många olika typer av neurala gränssnitt med olika för- och nackdelar.
-En del neurala gränssnitt ansluter direkt till nerverna eller direkt till
-hjärnan och kräver därför kirurgiska ingrepp. Andra neurala gränssnitt kan på
-avstånd läsa av magnetfälten som genereras av de elektriska nervimpulserna i
-hjärnan och kräver därför inga kirurgiska ingrepp.
+% xxx Fråga:
+% Kan "respektive" användas i meningen nedan? Vill försöka undvika att skriva
+% "olika" två gånger.
+% xxx
+
+Det finns en rad olika neurala gränssnitt med respektive för- och nackdelar. En
+del neurala gränssnitt ansluter direkt till nerverna eller direkt till hjärnan
+och kräver därför kirurgiska ingrepp. Andra neurala gränssnitt kan på avstånd
+mäta de magnetfält som alstras av nervimpulser i hjärnan och kräver därför inga
+kirurgiska ingrepp; mer om detta i sektion \ref{meg}.
 
 Vissa neurala gränssnitt är begränsade till envägskommunikation; de kan antingen
 skicka eller ta emot nervsignaler. Andra neurala gränssnitt har möjlighet att
 kommunicera i båda riktningarna; de kan både skicka och ta emot nervsignaler.
 
 \subsection{Kodning och avkodning av nervsignaler}
+\label{enc_dec}
 
 Ögonproteser \cite{sight2} och cochleaimplantat \cite{sound} skickar visuell
 respektive auditativ stimuli till hjärnan och förser således användaren med syn
-respektive hörsel. För att hjärnan ska kunna förstå sig på den stimuli som
+respektive hörsel. För att hjärnan ska kunna förstå sig på de stimuli som
 skickas måste informationen omkodas på ett korrekt sätt.
 
 Genom att studera de nervsignaler som normalt sett skickas från ögat via
-synnerven till hjärnan har man lyckat härleda hur den visuella informationen ska
+synnerven till hjärnan har man lyckats härleda hur den visuella informationen ska
 omkodas. Istället för att skicka hela synintrycket vid varje tillfälle så
 skickas bara de förändringar som registrerats. På så sätt kan vi lättare reagera
 på förändringar i vår omgivning och slipper samtidigt belasta hjärnan med onödig
 information. \cite{sight1} Detta kan liknas med hur olika filmformat endast
-lagrar förändringen mellan bildsekvenser (frames) för att spara på
-lagringsutrymme.
+lagrar förändringar mellan bildsekvenser (frames) för att minska
+lagringsutrymmet och öka överföringshastigheten.
 
-% xxx Note from Peter:
-% Ska du lägga till öka hastighet på överföringen? Detta gäller ju inte enbart
-% film utan även en andra program att du ej överför en hel sida varje gång, utan
-% endast förändringen på sidan.
-% xxx
-
-Liknande forskning har bedrivits för att ta reda på hur auditativ stimuli från
-örat kodas innan den överförs via hörselnerven till hjärnan.
+Liknande forskning har bedrivits för att studera hur auditativ stimuli från örat
+omkodas innan de överförs via hörselnerven till hjärnan.
 
 Studier av nervimpulser som skickas från hjärnan via de motoriska nerver till
 muskler i armar och ben har lyckats härleda hur rörelsekommandon kan avkodas.
 Denna kunskap har sedan applicerats i arm- och benproteser som därigenom kan
 styras intuitivt med tankarna \cite{prosthetic_operation}.
+
+% ### continue here ###
 
 \subsection{Algoritmer}
 
@@ -247,6 +247,7 @@ kompletterar varandra väl eftersom fMRI kan ta ett fåtal mätvärden per sekun
 med väldigt hög precision. \cite{eeg_fmri}
 
 \subsubsection{Magnetencefalografi}
+\label{meg}
 
 Enligt ett av elektromagnetismens postulat så ger rörelsen av elektriska
 laddningar upphov till magnetfält. \cite{electromagnetism} Magnetencefalografi
