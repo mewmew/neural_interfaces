@@ -15,14 +15,9 @@ The first part of the paper gives an introduction to the multidisciplinary field
 of neural interfaces. It summarizes what is currently possible with todays
 technology and highlight some of the issues that limits its use.
 
-The
-
 The last section of the paper contains my subjective opinion of the potential of
-neural interfaces and offers some examples of its future potential.
-
-In my opinion neural interfaces have a huge potential and in the last section of
-the paper I offer some examples of its future applications. As with any
-sophisticated technology it raises both ethical and moral questions, some of
+neural interfaces and offers some examples of its future potential. As with any
+sophisticated technology it raises both moral and ethical questions, some of
 which are discussed towards the end.
 
 Table of Content
