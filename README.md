@@ -16,8 +16,8 @@ of neural interfaces. It summarizes what is currently possible with todays
 technology and highlight some of the issues that limits its use.
 
 The last section of the paper contains my subjective opinion of the potential of
-neural interfaces and offers some examples of its future potential. As with any
-sophisticated technology it raises both moral and ethical questions, some of
+neural interfaces and offers some examples of its future applications. As with
+any sophisticated technology it raises both moral and ethical questions, some of
 which are discussed towards the end.
 
 Table of Content
@@ -29,7 +29,7 @@ Table of Content
 	1. Encoding and Decoding of Synaptic Signals
 	2. Algorithms
 3. One-Way Communication
-	1. Brain-Computer Interface
+	1. Brain-Computer Interfaces
 		1. Surface Electrodes
 		2. Electroencephalography
 		3. Magnetoencephalography
@@ -39,10 +39,10 @@ Table of Content
 4. Two-Way Communication
 5. Discussion
 	1. Potential and Future Applications
-		1. Taste recipes over the Internet
+		1. Taste Recipes over the Internet
 		2. Ultraportable Devices
 		3. Collective Memory
-		4. Extended repertoire of Senses
+		4. Extended Repertoire of Senses
 		5. Transmission of Feelings and the State of Mind
 	2. Moral and Ethical Issues
 
@@ -55,7 +55,7 @@ Innehållsförteckning
 	1. Kodning och avkodning av nervsignaler
 	2. Algoritmer
 3. Envägskommunikation
-	1. Brain-computer interface
+	1. Brain-computer interfaces
 		1. Ytelektroder
 		2. Elektroencefalografi
 		3. Magnetencefalografi
