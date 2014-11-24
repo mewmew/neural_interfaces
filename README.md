@@ -1,9 +1,7 @@
 Neural Interfaces
 =================
 
-This paper was written (in Swedish) for an assignment in the
-[Information Technology][] course given at [Uppsala University][] in the fall of
-2013.
+This paper was written (in Swedish) for an assignment in the [Information Technology] course given at [Uppsala University] in the fall of 2013.
 
 [Information Technology]: https://www.uu.se/en/admissions/master/selma/kursplan/?kKod=1DT051
 [Uppsala University]: https://www.uu.se/
@@ -11,14 +9,9 @@ This paper was written (in Swedish) for an assignment in the
 Disposition
 -----------
 
-The first part of the paper gives an introduction to the multidisciplinary field
-of neural interfaces. It summarizes what is currently possible with todays
-technology and highlight some of the issues that limits its use.
+The first part of the paper gives an introduction to the multidisciplinary field of neural interfaces. It summarizes what is currently possible with todays technology and highlight some of the issues that limits its use.
 
-The last section of the paper contains my subjective opinion of the potential of
-neural interfaces and offers some examples of its future applications. As with
-any sophisticated technology it raises both moral and ethical questions, some of
-which are discussed towards the end.
+The last section of the paper contains my subjective opinion of the potential of neural interfaces and offers some examples of its future applications. As with any sophisticated technology it raises both moral and ethical questions, some of which are discussed towards the end.
 
 Table of Content
 ----------------
@@ -75,6 +68,6 @@ Innehållsförteckning
 public domain
 -------------
 
-This paper is hereby released into the *[public domain][]*.
+This paper is hereby released into the [public domain].
 
 [public domain]: https://creativecommons.org/publicdomain/zero/1.0/
