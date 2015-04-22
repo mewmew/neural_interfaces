@@ -1,20 +1,17 @@
-Neural Interfaces
-=================
+# Neural Interfaces
 
 This paper was written (in Swedish) for an assignment in the [Information Technology] course given at [Uppsala University] in the fall of 2013.
 
 [Information Technology]: https://www.uu.se/en/admissions/master/selma/kursplan/?kKod=1DT051
 [Uppsala University]: https://www.uu.se/
 
-Disposition
------------
+## Disposition
 
 The first part of the paper gives an introduction to the multidisciplinary field of neural interfaces. It summarizes what is currently possible with todays technology and highlight some of the issues that limits its use.
 
 The last section of the paper contains my subjective opinion of the potential of neural interfaces and offers some examples of its future applications. As with any sophisticated technology it raises both moral and ethical questions, some of which are discussed towards the end.
 
-Table of Content
-----------------
+## Table of Contents
 
 1. Introduction
 	1. Purpose
@@ -39,8 +36,7 @@ Table of Content
 		5. Transmission of Feelings and the State of Mind
 	2. Moral and Ethical Issues
 
-Innehållsförteckning
---------------------
+## Innehållsförteckning
 
 1. Introduktion
 	1. Syfte
@@ -65,8 +61,7 @@ Innehållsförteckning
 		5. Överföring av känslor och sinnestillstånd
 	2. Etiska och moraliska aspekter
 
-public domain
--------------
+## Public domain
 
 This paper and any original content of this repository is hereby released into the [public domain].
 
