@@ -1,6 +1,6 @@
 # Neural Interfaces
 
-[This paper](https://raw.githubusercontent.com/mewpaper/neural_interfaces/master/neurala_gränssnitt.pdf) was written (in Swedish) for an assignment in the [Information Technology] course given at [Uppsala University] in the fall of 2013.
+[This paper](https://raw.githubusercontent.com/mewmew/neural_interfaces/master/neurala_gränssnitt.pdf) was written (in Swedish) for an assignment in the [Information Technology] course given at [Uppsala University] in the fall of 2013.
 
 [Information Technology]: https://www.uu.se/en/admissions/master/selma/kursplan/?kKod=1DT051
 [Uppsala University]: https://www.uu.se/
