@@ -1,7 +1,12 @@
 all: neurala_gränssnitt.pdf
 
-neurala_gränssnitt.pdf:
-	texi2pdf -q -c neurala_gränssnitt.tex
+%.pdf: %.tex
+	latexrun --latex-cmd=xelatex -o $@ $<
+	# run twice because LaTeX.
+	latexrun --latex-cmd=xelatex -o $@ $<
+
+.PHONY: all clean
 
 clean:
-	rm -f *.aux *.log *.out *.toc
+	$(RM) -v -rf latex.out
+	$(RM) -v neurala_gränssnitt.pdf
