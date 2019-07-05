@@ -17,7 +17,7 @@ The last section of the paper contains my subjective opinion of the potential of
 	1. Purpose
 2. Neural Interfaces
 	1. Encoding and Decoding of Synaptic Signals
-	2. Algorithms
+	2. Algorithms for Neural Coding and Decoding
 3. One-Way Communication
 	1. Brain-Computer Interfaces
 		1. Surface Electrodes
@@ -34,7 +34,7 @@ The last section of the paper contains my subjective opinion of the potential of
 		3. Collective Memory
 		4. Extended Repertoire of Senses
 		5. Transmission of Feelings and the State of Mind
-	2. Moral and Ethical Issues
+	2. Moral and Ethical Considerations
 
 ## Innehållsförteckning
 
@@ -42,7 +42,7 @@ The last section of the paper contains my subjective opinion of the potential of
 	1. Syfte
 2. Neurala gränssnitt
 	1. Kodning och avkodning av nervsignaler
-	2. Algoritmer
+	2. Algoritmer för neural kodning och avkodning
 3. Envägskommunikation
 	1. Brain-computer interfaces
 		1. Ytelektroder
