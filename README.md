@@ -7,7 +7,7 @@
 
 ## Disposition
 
-The first part of the paper gives an introduction to the multidisciplinary field of neural interfaces. It summarizes what is currently possible with todays technology and highlight some of the issues that limits its use.
+The first part of the paper gives an introduction to the multidisciplinary field of neural interfaces. It summarizes what is currently possible with today's technology and highlight some of the issues that limits its use.
 
 The last section of the paper contains my subjective opinion of the potential of neural interfaces and offers some examples of its future applications. As with any sophisticated technology it raises both moral and ethical questions, some of which are discussed towards the end.
 
