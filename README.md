@@ -35,6 +35,7 @@ The last section of the paper contains my subjective opinion of the potential of
 		4. Extended Repertoire of Senses
 		5. Transmission of Feelings and the State of Mind
 	2. Moral and Ethical Considerations
+6. Epilogue
 
 ## Innehållsförteckning
 
@@ -60,6 +61,7 @@ The last section of the paper contains my subjective opinion of the potential of
 		4. Utökad sinnesrepertoar
 		5. Överföring av känslor och sinnestillstånd
 	2. Etiska och moraliska aspekter
+6. Slutord
 
 ## Public domain
 
