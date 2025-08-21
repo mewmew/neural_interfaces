@@ -30,11 +30,12 @@
 
 #set page(numbering: "1")
 
-// TODO: \usepackage[parfill]{parskip}
+#show title: set text(weight: "regular")
 
 #let author = [Robin Eklind]
+#let date   = "2013-10-27"// #datetime.today().display()
 
-#show title: set text(weight: "regular")
+// === [ Main matter ] =========================================================
 
 // === TODO ===
 // * Verifiera att:
@@ -58,7 +59,7 @@
 // Finger känns av annan person.
 // xxx
 
-// --- [ title page ] ----------------------------------------------------------
+// --- [ Title page ] ----------------------------------------------------------
 
 #v(1.7cm)
 
@@ -71,18 +72,20 @@
 
 	#v(0.2cm)
 
-	#text(size: 1.3em)[#datetime.today().display()]
+	#text(size: 1.3em)[#date]
 ]
 
 #v(1fr)
 
 #quote(
 	block: true,
-	attribution: [Arthur C. Clarke @clarke_quote],
-	[#emph["Any sufficiently advanced technology is indistinguishable from magic."]],
+	attribution: [Arthur C. Clarke @1973_clarke_quote],
+	emph["Any sufficiently advanced technology is indistinguishable from magic."],
 )
 
 #pagebreak(weak: true)
+
+// --- [ Table of contents ] ---------------------------------------------------
 
 #outline()
 
@@ -92,14 +95,14 @@
 
 = Introduktion
 
-Vi lever i en tid där informationsutbyte blomstrar och vetenskapliga upptäckter skapar interdisciplinära synergieffekter. Banbrytande framsteg kommer med allt tätare intervall och inom många områden är utvecklingshastigheten exponentiell @exponential.
+Vi lever i en tid där informationsutbyte blomstrar och vetenskapliga upptäckter skapar interdisciplinära synergieffekter. Banbrytande framsteg kommer med allt tätare intervall och inom många områden är utvecklingshastigheten exponentiell @2010_exponential.
 
-På Sahlgrenska Universitetssjukhuset utfördes tidigare under året en operation där en patient förseddes med en permanent muskel- och nervstyrd armprotes. Eftersom protesens elektroder ansluts direkt till nerverna är det möjligt att både skicka och ta emot nervsignaler. Hjärnan kan intuitivt kontrollera protesens rörelser genom att skicka motoriska nervimpulser. Ännu mer sensationellt är att känselintryck kan förmedlas tillbaka till hjärnan genom stimulering av nerverna @prosthetic_operation.
+På Sahlgrenska Universitetssjukhuset utfördes tidigare under året en operation där en patient förseddes med en permanent muskel- och nervstyrd armprotes. Eftersom protesens elektroder ansluts direkt till nerverna är det möjligt att både skicka och ta emot nervsignaler. Hjärnan kan intuitivt kontrollera protesens rörelser genom att skicka motoriska nervimpulser. Ännu mer sensationellt är att känselintryck kan förmedlas tillbaka till hjärnan genom stimulering av nerverna @2013_prosthetic_operation.
 
 I pressmeddelandet poängteras det etablerade samarbetet mellan de olika disciplinerna:
 #quote(
 	block: true,
-	[#emph["Samverkan mellan flera olika områden (medicin, biomaterial, mekatronik, analog och digital elektronik, artificiell intelligens, biomekanik etc.) är en förutsättning för detta komplexa projekt."] @prosthetic_operation]
+	[#emph["Samverkan mellan flera olika områden (medicin, biomaterial, mekatronik, analog och digital elektronik, artificiell intelligens, biomekanik etc.) är en förutsättning för detta komplexa projekt."] @2013_prosthetic_operation]
 )
 
 Nervstyrda proteser har möjliggjorts tack vare så kallade #emph[neurala gränssnitt] som skapar en kommunikationskanal mellan elektroniska komponenter och hjärnan. Genom detta gränssnitt länkas våra sinnen och tankar samman med den digitala världen. Vi står en spännande tid till mötes då neurala gränssnitts sanna potential börjar utforskas.
@@ -114,26 +117,26 @@ Syftet med denna rapport är att grovt sammanfatta hur dagens neurala gränssnit
 
 = Neurala gränssnitt
 
-Syn, hörsel, känsel och motoriska färdigheter är så fundamentala för våra liv att vi ofta tar dem för givet. Dessa förmågor är så djupt integrerade i vår vardag att de personer som förlorar någon av dem ofta drabbas av depression @depression. Med hjälp av neurala gränssnitt har det visat sig vara möjligt att återställa både sensoriska @sight1 @sound @touch och motoriska förmågor @prosthetic_operation, och därmed förbättra livskvaliteten hos de drabbade.
+Syn, hörsel, känsel och motoriska färdigheter är så fundamentala för våra liv att vi ofta tar dem för givet. Dessa förmågor är så djupt integrerade i vår vardag att de personer som förlorar någon av dem ofta drabbas av depression @2012_depression. Med hjälp av neurala gränssnitt har det visat sig vara möjligt att återställa både sensoriska @2011_sight1 @2008_sound @2004_touch och motoriska förmågor @2013_prosthetic_operation, och därmed förbättra livskvaliteten hos de drabbade.
 
 Neurala gränssnitt är ett tvärvetenskapligt område som drar nytta av framsteg inom såväl data- och neurovetenskap som maskininlärning och materialvetenskap. Centralt för området är dock studierna kring hur hjärnan kommunicerar med resten av kroppen.
 
-Generellt sett så skickar hjärnan ut motoriska kommandon och tar emot sensorisk stimuli. All information som skickas till och från hjärnan måste omkodas innan den kan överföras i form av nervsignaler. Denna omkodning kan liknas med den översättning, mellan olika tecken och unika sekvenser av ettor och nollor, som sker inom datorer. Neurala gränssnitt skapar en länk mellan hjärnan och elektroniska komponenter som gör det möjligt att skicka och ta emot nervsignaler. För att kunna kommunicera med hjärnan måste nervsignalerna i sin tur kodas och avkodas på ett korrekt sätt; mer om detta i @enc_dec.
+Generellt sett så skickar hjärnan ut motoriska kommandon och tar emot sensorisk stimuli. All information som skickas till och från hjärnan måste omkodas innan den kan överföras i form av nervsignaler. Denna omkodning kan liknas med den översättning, mellan olika tecken och unika sekvenser av ettor och nollor, som sker inom datorer. Neurala gränssnitt skapar en länk mellan hjärnan och elektroniska komponenter som gör det möjligt att skicka och ta emot nervsignaler. För att kunna kommunicera med hjärnan måste nervsignalerna i sin tur kodas och avkodas på ett korrekt sätt; mer om detta i @sec-enc_dec.
 
-Det finns en rad olika neurala gränssnitt med respektive för- och nackdelar. En del neurala gränssnitt ansluts direkt till nerverna eller direkt till hjärnan och kräver därför kirurgiska ingrepp. Andra neurala gränssnitt kan på avstånd mäta de magnetfält som alstras av nervimpulser i hjärnan, och kräver därför inga kirurgiska ingrepp; mer om detta i @meg.
+Det finns en rad olika neurala gränssnitt med respektive för- och nackdelar. En del neurala gränssnitt ansluts direkt till nerverna eller direkt till hjärnan och kräver därför kirurgiska ingrepp. Andra neurala gränssnitt kan på avstånd mäta de magnetfält som alstras av nervimpulser i hjärnan, och kräver därför inga kirurgiska ingrepp; mer om detta i @sec-meg.
 
 Vissa neurala gränssnitt är begränsade till envägskommunikation; de kan antingen skicka eller ta emot nervsignaler. Andra neurala gränssnitt har möjlighet att kommunicera i båda riktningarna, det vill säga de kan både skicka och ta emot nervsignaler.
 
 // --- [ Kodning och avkodning av nervsignaler ] --------------------------------
 
 == Kodning och avkodning av nervsignaler
-<enc_dec>
+<sec-enc_dec>
 
-Ögonproteser @sight2 och cochleaimplantat @sound skickar visuell respektive auditativ stimuli till hjärnan och förser således användaren med syn respektive hörsel. För att hjärnan ska kunna förstå de stimuli som skickas, måste informationen omkodas på ett korrekt sätt.
+Ögonproteser @2012_sight2 och cochleaimplantat @2008_sound skickar visuell respektive auditativ stimuli till hjärnan och förser således användaren med syn respektive hörsel. För att hjärnan ska kunna förstå de stimuli som skickas, måste informationen omkodas på ett korrekt sätt.
 
-Genom att studera de nervsignaler som normalt sett skickas från ögat via synnerven till hjärnan har en lyckats härleda hur den visuella informationen ska omkodas. Istället för att skicka hela synintrycket vid varje tillfälle så skickas bara de förändringar som registrerats. På så sätt kan vi lättare reagera på förändringar i vår omgivning och slipper samtidigt belasta hjärnan med onödig information @sight1. Detta kan liknas vid hur olika filmformat endast lagrar förändringar mellan bildsekvenser, så kallade frames, för att minska filstorleken och öka överföringshastigheten. Liknande forskning har bedrivits för att studera hur auditativ stimuli från örat omkodas innan de överförs via hörselnerven till hjärnan.
+Genom att studera de nervsignaler som normalt sett skickas från ögat via synnerven till hjärnan har en lyckats härleda hur den visuella informationen ska omkodas. Istället för att skicka hela synintrycket vid varje tillfälle så skickas bara de förändringar som registrerats. På så sätt kan vi lättare reagera på förändringar i vår omgivning och slipper samtidigt belasta hjärnan med onödig information @2011_sight1. Detta kan liknas vid hur olika filmformat endast lagrar förändringar mellan bildsekvenser, så kallade frames, för att minska filstorleken och öka överföringshastigheten. Liknande forskning har bedrivits för att studera hur auditativ stimuli från örat omkodas innan de överförs via hörselnerven till hjärnan.
 
-Studier av nervimpulser som skickas från hjärnan via motoriska nerver till muskler i armar och ben har lyckats härleda hur rörelsekommandon kan avkodas. Tack vare denna kunskap har tankestyrda arm- och benproteser kunnat utvecklas @prosthetic_operation.
+Studier av nervimpulser som skickas från hjärnan via motoriska nerver till muskler i armar och ben har lyckats härleda hur rörelsekommandon kan avkodas. Tack vare denna kunskap har tankestyrda arm- och benproteser kunnat utvecklas @2013_prosthetic_operation.
 
 // --- [ Algoritmer för neural kodning och avkodning ] --------------------------
 
@@ -173,7 +176,7 @@ Nedan redovisas några olika typer av brain-computer interfaces samt för- och n
 
 Genom att fästa ytelektroder på huden kan de motoriska nervsignalerna som skickas från hjärnan avläsas i form av elektrisk muskelaktivitet. För att fästa dessa ytelektroder krävs inga kirurgiska ingrepp, vilket gör att de lätt kan användas av vem som helst.
 
-Denna teknik har länge använts av arm- och benproteser, men antalet unika rörelsemönster som kan förmedlas via gränssnittet är begränsat. När huden rör på sig så förflyttas ytelektroderna vilket påverkar avläsningen av impulsen. Även svett påverkar impulsen vilket kan göra avläsningarna mindre pålitliga @prosthetic_operation.
+Denna teknik har länge använts av arm- och benproteser, men antalet unika rörelsemönster som kan förmedlas via gränssnittet är begränsat. När huden rör på sig så förflyttas ytelektroderna vilket påverkar avläsningen av impulsen. Även svett påverkar impulsen vilket kan göra avläsningarna mindre pålitliga @2013_prosthetic_operation.
 
 // ~~~ [ Elektroencefalografi ] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -187,16 +190,16 @@ Fördelen med EEG är att inga kirurgiska ingrepp krävs för att fästa elektro
 // * Add ref to section about fMRI when it is written.
 // xxxxxxxxxxxx
 
-Idag kombineras ofta resultat från EEG och funktionell magnetresonanstomografi (förkortas fMRI på engelska) för att få ut det bästa av två världar. De kompletterar varandra väl eftersom fMRI kan ta ett fåtal mätvärden per sekund med väldigt hög precision @eeg_fmri.
+Idag kombineras ofta resultat från EEG och funktionell magnetresonanstomografi (förkortas fMRI på engelska) för att få ut det bästa av två världar. De kompletterar varandra väl eftersom fMRI kan ta ett fåtal mätvärden per sekund med väldigt hög precision @2013_eeg_fmri.
 
 // ~~~ [ Magnetencefalografi ] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 === Magnetencefalografi
-<meg>
+<sec-meg>
 
-Enligt ett av elektromagnetismens postulat så ger rörelsen av elektriska laddningar upphov till magnetfält @electromagnetism. Magnetencefalografi utnyttjar detta fenomen för att mäta magnetfälten som alstras av elektriska nervsignaler i hjärnan. På så sätt kan utsprunget till nervaktivitet i hjärnan lokaliseras.
+Enligt ett av elektromagnetismens postulat så ger rörelsen av elektriska laddningar upphov till magnetfält @2013_electromagnetism. Magnetencefalografi utnyttjar detta fenomen för att mäta magnetfälten som alstras av elektriska nervsignaler i hjärnan. På så sätt kan utsprunget till nervaktivitet i hjärnan lokaliseras.
 
-Magnetencefalografi kräver inga kirurgiska ingrepp och kan på många sätt liknas med EEG. Samtidigt finns en del skillnader mellan teknikerna. Medan EEG mäter elektriska nervimpulser så mäter magnetencefalografi de magnetfält som alstras av de elektriska nervimpulserna. Precisionen hos magnetencefalografi är lika hög eller högre än den hos EEG och mätvärden kan tas lika ofta. Däremot har EEG möjlighet att mäta av nervaktivitet från fler områden i hjärnan @meg_eeg.
+Magnetencefalografi kräver inga kirurgiska ingrepp och kan på många sätt liknas med EEG. Samtidigt finns en del skillnader mellan teknikerna. Medan EEG mäter elektriska nervimpulser så mäter magnetencefalografi de magnetfält som alstras av de elektriska nervimpulserna. Precisionen hos magnetencefalografi är lika hög eller högre än den hos EEG och mätvärden kan tas lika ofta. Däremot har EEG möjlighet att mäta av nervaktivitet från fler områden i hjärnan @1983_meg_eeg.
 
 //=== Funktionell magnetresonanstomografi
 //
@@ -208,13 +211,13 @@ Magnetencefalografi kräver inga kirurgiska ingrepp och kan på många sätt lik
 
 == Computer-brain interfaces
 
-Neurala gränssnitt som möjliggör kommunikation från digitala komponenter till hjärnan kallas för computer-brain interfaces (CBI). I @BBI redovisas ett exempel på användning av CBI.
+Neurala gränssnitt som möjliggör kommunikation från digitala komponenter till hjärnan kallas för computer-brain interfaces (CBI). I @sec-bbi redovisas ett exempel på användning av CBI.
 
 // ~~~ [ Högintensivt fokuserat ultraljud ] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 === Högintensivt fokuserat ultraljud
 
-Högintensivt fokuserat ultraljud kan användas för att stimulera specifika nervceller i hjärnan med hög precision. Genom att aktivera olika områden i hjärnan är det till exempel möjligt att kontrollera muskelrörelser @bbi. Läs mer om hur högintensivt fokuserat ultraljud kan användas i brain-brain interfaces under @BBI.
+Högintensivt fokuserat ultraljud kan användas för att stimulera specifika nervceller i hjärnan med hög precision. Genom att aktivera olika områden i hjärnan är det till exempel möjligt att kontrollera muskelrörelser @2013_bbi. Läs mer om hur högintensivt fokuserat ultraljud kan användas i brain-brain interfaces under @sec-bbi.
 
 //=== Transkraniell magnetstimulering
 
@@ -227,11 +230,11 @@ Högintensivt fokuserat ultraljud kan användas för att stimulera specifika ner
 // --- [ Brain-brain interfaces ] -----------------------------------------------
 
 == Brain-brain interfaces
-<BBI>
+<sec-bbi>
 
 Brain-brain interfaces (BBI) skulle kunna ses som envägskommunikation i två steg. I första steget överförs motoriska kommandon från hjärnan hos en individ via BCI till en dator. I andra steget överförs sedan dessa motoriska kommandon från datorn via CBI till hjärnan hos en annan individ.
 
-Tidigare under året redovisade forskare från Harvard ett experiment där en människa genom enbart tankar kunde kontrollera svansrörelserna hos en råtta @bbi. Det spektakulära är att inga kirurgiska ingrepp krävdes för att utföra experimentet.
+Tidigare under året redovisade forskare från Harvard ett experiment där en människa genom enbart tankar kunde kontrollera svansrörelserna hos en råtta @2013_bbi. Det spektakulära är att inga kirurgiska ingrepp krävdes för att utföra experimentet.
 
 I experimentet analyserades personens tankar med hjälp av BCI och överfördes sedan till datorns i form av "uppåt-" och "nedåtkommandon". Sedan användes högintensivt fokuserat ultraljud för att stimulera de motoriska områden i hjärnan som kontrollerar antingen "uppåt-" eller "nedåtrörelser" med svansen.
 
@@ -245,7 +248,7 @@ Neurala gränssnitt med stöd för tvåvägskommunikation kan både skicka och t
 // * Utveckla nedanstående stycke så att sambandet syns tydligare.
 // xxxxxxxxxxxx
 
-Det är extremt viktigt med känsel för att kunna greppa föremål utan att antingen tappa eller krossa dem. Känselintryck är dessutom fundamentala för att personen ska acceptera protesen som en del av sin kropp#footnote[I dagsläget väljer ungefär hälften av personer med protes att ta av sig protesen när den inte används, då protesen känns mer som ett verktyg än en del av deras kropp.] @prosthetic_operation.
+Det är extremt viktigt med känsel för att kunna greppa föremål utan att antingen tappa eller krossa dem. Känselintryck är dessutom fundamentala för att personen ska acceptera protesen som en del av sin kropp#footnote[I dagsläget väljer ungefär hälften av personer med protes att ta av sig protesen när den inte används, då protesen känns mer som ett verktyg än en del av deras kropp.] @2013_prosthetic_operation.
 
 //#todo[xxx TODO: skriv om fördelar med tvåvägskommunikation för proteser. Samma risker som hos CBI. xxx]
 //
@@ -273,7 +276,7 @@ Det är extremt viktigt med känsel för att kunna greppa föremål utan att ant
 //
 //Neurala elektroder ansluter direkt till nervtrådarna ...
 //
-//@prosthetic_operation + den andra referensen från Chalmers. Osseointegrerade implantat (titan)
+//@2013_prosthetic_operation + den andra referensen från Chalmers. Osseointegrerade implantat (titan)
 
 //Eftersom det krävs en operation är dessa ingrepp riskabla. Samtidigt ger de en enorm potential eftersom det går att xxxtargetxxx enskilda nerver, nervbanor samt nervceller ...
 
@@ -293,7 +296,7 @@ Alla tekniska framsteg kan användas för såväl gott som ont. Ett känt citat 
 
 #quote(
 	block: true,
-	attribution: [Marie Curie @curie_quote],
+	attribution: [Marie Curie @2008_curie_quote],
 	emph["I am one of those who think like Nobel, that humanity will draw more good than evil from new discoveries."],
 )
 
@@ -303,7 +306,7 @@ Alla tekniska framsteg kan användas för såväl gott som ont. Ett känt citat 
 
 == Potential och framtida användningsområden
 
-Endast vår fantasi och uppfinningsrikedom begränsar potentialen hos neurala gränssnitt. Eftersom neurala gränssnitt visats kapabla att överföra sinnesintryck för syn @sight1 @sight2, hörsel @sound och känsel @touch bör det ses som en tidsfråga innan alla sorters stimuli kan överföras. Nedan redovisas exempel på några framtida användningsområden.
+Endast vår fantasi och uppfinningsrikedom begränsar potentialen hos neurala gränssnitt. Eftersom neurala gränssnitt visats kapabla att överföra sinnesintryck för syn @2011_sight1 @2012_sight2, hörsel @2008_sound och känsel @2004_touch bör det ses som en tidsfråga innan alla sorters stimuli kan överföras. Nedan redovisas exempel på några framtida användningsområden.
 
 // ~~~ [ Provsmakning av recept via Internet ] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -317,9 +320,9 @@ Tänk om det vore möjligt att gå in på en hemsida och provsmaka olika recept.
 
 Föreställ dig en ultraportabel laptop utan skärm, mus, tangentbord och högtalare där all interaktion sker via neurala gränssnitt.
 
-Neurala gränssnitt har möjligheten att revolutionera hur vi interagerar med digitala enheter. Redan 2003 användes neurala gränssnitt för att kontrollera muspekare med hjälp av tankarna @cursor1. Sedan dess har tekniken fortsatt att utvecklas. Genom förbättrade algoritmer lyckades forskare från Stanford förra året fördubbla hastigheten hos tankestyrda muspekare @fast_cursor.
+Neurala gränssnitt har möjligheten att revolutionera hur vi interagerar med digitala enheter. Redan 2003 användes neurala gränssnitt för att kontrollera muspekare med hjälp av tankarna @2003_cursor1. Sedan dess har tekniken fortsatt att utvecklas. Genom förbättrade algoritmer lyckades forskare från Stanford förra året fördubbla hastigheten hos tankestyrda muspekare @2012_fast_cursor.
 
-Ögonproteser använder sig av neurala gränssnitt för att överföra visuell stimuli till hjärnan @prosthetic_operation. Informationen som normalt sätt representeras med hjälp av en bildskärm skulle istället kunna överföras via neurala gränssnitt.
+Ögonproteser använder sig av neurala gränssnitt för att överföra visuell stimuli till hjärnan @2013_prosthetic_operation. Informationen som normalt sätt representeras med hjälp av en bildskärm skulle istället kunna överföras via neurala gränssnitt.
 
 //=== Inspelning av drömmar
 //
@@ -345,16 +348,18 @@ Genom det kollektiva minnet vore det möjligt att minnas en plats du aldrig bes�
 
 === Utökad sinnesrepertoar
 
-Dagens neurala gränssnitt kan återställa sinnesintryck för syn @sight1, hörsel @sound och känsel @touch. Morgondagens neurala gränssnitt skulle kunna utöka kapaciteten hos våra nuvarande sinnen.
+Dagens neurala gränssnitt kan återställa sinnesintryck för syn @2011_sight1, hörsel @2008_sound och känsel @2004_touch. Morgondagens neurala gränssnitt skulle kunna utöka kapaciteten hos våra nuvarande sinnen.
 
-Tänk om vi kunde utöka vårt synliga ljusspektra så det inkluderade infrarött och ultraviolett ljus. Det finns så mycket vackert här i världen som vi då skulle kunna ta del av! Bland annat skulle vi få bevittna de unika ultravioletta mönster som finns hos korallrevsfiskar @uv_patterns och blommor.
+Tänk om vi kunde utöka vårt synliga ljusspektra så det inkluderade infrarött och ultraviolett ljus. Det finns så mycket vackert här i världen som vi då skulle kunna ta del av! Bland annat skulle vi få bevittna de unika ultravioletta mönster som finns hos korallrevsfiskar @2004_uv_patterns och blommor.
 
-Utöver vanliga sinnesintryck har det visat sig möjligt att överföra stimuli för sinnen vi ännu inte besitter. Hjärnan arbetar först hårt med att analysera de okända sinnesintrycken men lär sig efter ett tag hur de ska tolkas. Att lära sig tolka nya sorters stimuli kan jämföras med att förstå sig på nya språk, det är svårt i början men känns så småningom intuitivt @learn_sense.
+Utöver vanliga sinnesintryck har det visat sig möjligt att överföra stimuli för sinnen vi ännu inte besitter. Hjärnan arbetar först hårt med att analysera de okända sinnesintrycken men lär sig efter ett tag hur de ska tolkas. Att lära sig tolka nya sorters stimuli kan jämföras med att förstå sig på nya språk, det är svårt i början men känns så småningom intuitivt @2011_learn_sense.
 
 Så vilka sinnen vill vi berikas med? Nedan ges exempel på några av de fascinerande sinnen som finns representerade i djurriket:
 
 - #emph[Magnetoreception] utgörs av förmågan att känna av magnetfält. Flyttfåglar använder detta sinne för att navigera.
+
 - #emph[Sonar] utgörs av förmågan att varsebli sin omgivning genom att tolka reflekterande ljud. Fladdermöss är kända för att navigera med hjälp av sonar.
+
 - #emph[Elektroreception] utgörs av förmågan att upptäcka elektriska fält i sin omgivning. Hajar använder denna förmåga för att lokalisera byten.
 
 Utöver redan befintliga sinnen vore det möjligt att överföra sinnesintryck för helt artificiella sinnen. Till exempel skulle GPS-koordinaterna för ens nuvarande position kunna överföras via det neurala gränssnittet. Så småningom lär sig hjärnan att tolka den nya information och vi berikas då med ett sinne för positionering.
@@ -383,9 +388,9 @@ Med neurala gränssnitt ges vi för första gången möjligheten att kontrollera
 
 Kan vi förutsäga hur tekniken kommer användas? De flesta anser nog att neurala gränssnitt borde få användas för att återställa syn, hörsel och rörelseförmågor hos personer med motsvarande funktionsnedsättning. Något svårare är det att enhetligt säga om vi bör få utöka, förbättra och förändra våra förmågor.
 
-Självklart borde varje person fritt få bestämma över sin egen kropp och sitt eget sinne. Det moraliska dilemmat uppstår ifall normen skulle bli att utöka sin sinnesrepertoar och förbättra sina mentala och till viss del fysiska förmågor. Efter ett tag tas det fria valet bort från minoriteten om de vill fortsätta att leva ett "normalt" liv, eftersom normen blivit att vara ansluten till det kollektiva minnet. Utan att själv ansluta dit så går det inte längre att konkurrera inom vissa områden @ethics_eu @ethics1. En parallell kan dras till dagens ökade användande av smarta mobiltelefoner och Facebook, vilket kan leda till en distansering mellan anslutna och icke-anslutna personer.
+Självklart borde varje person fritt få bestämma över sin egen kropp och sitt eget sinne. Det moraliska dilemmat uppstår ifall normen skulle bli att utöka sin sinnesrepertoar och förbättra sina mentala och till viss del fysiska förmågor. Efter ett tag tas det fria valet bort från minoriteten om de vill fortsätta att leva ett "normalt" liv, eftersom normen blivit att vara ansluten till det kollektiva minnet. Utan att själv ansluta dit så går det inte längre att konkurrera inom vissa områden @2005_ethics_eu @1998_ethics1. En parallell kan dras till dagens ökade användande av smarta mobiltelefoner och Facebook, vilket kan leda till en distansering mellan anslutna och icke-anslutna personer.
 
-En annan etisk och moralisk aspekt att ta hänsyn till är i vilken mån vi har rätt att bedriva experiment på djur. Till exempel så har vi utfört experiment som gör det möjligt att fjärrstyra skalbaggar och andra insekter @ethics2. Det är svårt att dra en gräns mellan vad som ska vara tillåtet inom forskning. Framstegen kan underlätta och minska lidandet för så många, men samtidigt borde vissa etiska grundprinciper krävas inom forskning.
+En annan etisk och moralisk aspekt att ta hänsyn till är i vilken mån vi har rätt att bedriva experiment på djur. Till exempel så har vi utfört experiment som gör det möjligt att fjärrstyra skalbaggar och andra insekter @2010_ethics2. Det är svårt att dra en gräns mellan vad som ska vara tillåtet inom forskning. Framstegen kan underlätta och minska lidandet för så många, men samtidigt borde vissa etiska grundprinciper krävas inom forskning.
 
 = Slutord
 
@@ -409,7 +414,7 @@ Exakt hur neurala gränssnitt kommer nyttjas framöver återstår att se. Vi st�
 //
 //Maktverktyg som har en enorm potential för missbruk. Focused ultrasound för att kontrollera personers tankar och känslor.
 //
-//Risk med operationer @dbs_parkinsons1.
+//Risk med operationer (deep brain stimulation, parkinsons).
 
 //Styra insekter med micro-chip, ålhjärna, ...
 
