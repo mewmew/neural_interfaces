@@ -30,10 +30,9 @@
 
 #set page(numbering: "1")
 
-#show title: set text(weight: "regular")
-
-#let author = [Robin Eklind]
-#let date   = "2013-10-27"// #datetime.today().display()
+#set document(title: [Neurala gränssnitt])
+#set document(author: "Robin Eklind")
+#set document(date: datetime(year: 2013, month: 10, day: 27)) // "2013-10-27"
 
 // === [ Main matter ] =========================================================
 
@@ -61,19 +60,7 @@
 
 // --- [ Title page ] ----------------------------------------------------------
 
-#v(1.7cm)
-
-#align(center)[
-	#title[Neurala gränssnitt]
-
-	#v(0.6cm)
-
-	#text(size: 1.3em)[#author]
-
-	#v(0.2cm)
-
-	#text(size: 1.3em)[#date]
-]
+#latex-lookalike.make-title()
 
 #v(1fr)
 
